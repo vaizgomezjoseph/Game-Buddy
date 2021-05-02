@@ -28,6 +28,16 @@
         <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet'>
         <link href='https://fonts.googleapis.com/css?family=Gafata' rel='stylesheet'>
 
+		<script>
+			function readingInput(){
+				var x = document.getElementById("myInput").value;
+				if (x !== "")
+					exec("python GameBuddyEngine.py " + x);
+				else
+					alert("Sorry, you forgot to give us the game you want to check");
+			}
+		</script>
+
 	</head>
 
     <body>
@@ -37,8 +47,8 @@
             <h2 class="horizontal-center"> What Game are you are interested in? </h2>
             
             <div class="horizontal-center">   
-                <input type="text" placeholder=" &quot;Overcooked 2&quot;">
-                <button class="button">Predict!</button>
+                <input type="text" id="myInput" placeholder=" &quot;Overcooked 2&quot;">
+                <button class="button" id="myBt" onclick="readingInput()">Predict!</button>
             </div>
             
 
